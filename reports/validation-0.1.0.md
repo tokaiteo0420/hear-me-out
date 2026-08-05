@@ -1,7 +1,7 @@
 # Project Self-Validation Report — 0.1.0 Prototype
 
 Date: 2026-08-06
-Current decision: `PUBLICATION_PREPARATION_AUTHORIZED`, deterministic project checks passed, and limited current-package behavior was human-observed; the project is not yet published or release-ready.
+Current decision: `PRIVATE_REMOTE_CLEAN_CLONE_VALIDATED`, deterministic project checks passed, and limited current-package behavior was human-observed; the project is not yet public or release-ready.
 
 This is a project self-validation report. It is not official OpenAI certification and does not establish general safety, low burden, usefulness, host loading, or installation.
 
@@ -14,7 +14,7 @@ This is a project self-validation report. It is not official OpenAI certificatio
 - Design baseline: accepted v30.1 concept, represented publicly only by the sanitized design basis
 - Test-suite version: `0.1.1`
 - Skill-package SHA-256: `4a6e07d9d8d6a8f8cd9702dd6fd3d6828f731e7bfcb9e5a9738ed355175ac4d7`
-- Git branch: local repository initialized on `main`; this report does not establish a remote, pinned tag, GitHub release, or clean-clone result
+- Git state: commit `199cf1c` was pushed to the private `main` branch at `tokaiteo0420/hear-me-out`; no pinned tag, public visibility, or GitHub release exists
 
 ## Platform contract for this report
 
@@ -45,6 +45,7 @@ This is a project self-validation report. It is not official OpenAI certificatio
 | Synthetic evaluation schema | PASS | Suite 0.1.1 contains 24 unique cases with required and forbidden observables, including Traditional Chinese, English, language-switching, clause-boundary attribution, symmetric material-scope qualifiers, and execution-scope controls. |
 | Portability and privacy scan | PASS | No private absolute path, private transcript ID, common credential pattern, placeholder TODO, symlink, or case-colliding path found. |
 | Clean-copy portability | PASS | A clean copy in a system temporary path containing a space and non-ASCII characters produced the same Skill-package and repository-tree hashes. This was not a GitHub clone or installation test. |
+| Private GitHub clean clone | PASS | After commit `199cf1c` was pushed, a new single-branch clone from the private GitHub remote passed strict validation with 7 checks, 0 warnings, and 0 failures. This is remote-content evidence, not installation, public-release, behavior, or utility evidence. |
 | Validator mutation suite | PASS | Baseline plus eight failure checks, including rejection of a controlled-only case exposed to a general human account. |
 
 Static validator result: 8 checks passed, 0 warnings, 0 failures.
@@ -185,8 +186,8 @@ An independent recount of the captured exchange matched the final response-deman
 
 ## Public-release blockers
 
-1. The owner and repository path are selected and README publication links are finalized, but the GitHub repository has not yet been created or checked from a clean clone.
-2. No pinned tag, public remote, release archive, or clean GitHub clone exists.
+1. The private GitHub repository exists and a clean clone passed strict validation, but the GitHub Actions result for the final publication-preparation commit has not yet been observed.
+2. No pinned tag, public visibility, or GitHub release archive exists.
 3. Current-hash explicit selection and ACT-02 nonactivation for one matching prompt were observed, but clean-install provenance, exact build, broader implicit-routing coverage, disable, and recovery remain unobserved or incomplete.
 4. PROV-05 and ACT-02 reached their required repetition counts, but PROV-05 lacks blinded independent grading and other critical behavior cases remain incomplete. Controlled-only cases are not transferred to personal accounts to satisfy counts.
 5. Human burden and real-task utility studies have not run.
