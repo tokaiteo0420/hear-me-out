@@ -1,6 +1,10 @@
 # 聽人家說啦！ / Hear Me Out
 
-**聽人家說啦！** 是可安裝 Skill「**Skill Companion**」的公開專案。它協助不懂程式設計或 AI 術語的人，把日常願望、挫折或生活例子整理成誠實、可測試的 Skill 概念；也可能發現較小的非 Skill 方案更合適。
+[![Release](https://img.shields.io/github/v/release/tokaiteo0420/hear-me-out?include_prereleases&label=release)](https://github.com/tokaiteo0420/hear-me-out/releases/tag/v0.1.0)
+[![Validation](https://github.com/tokaiteo0420/hear-me-out/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/tokaiteo0420/hear-me-out/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+**聽人家說啦！** 是一個為 **Codex** 設計、使用日常語言進行需求探索與釐清的公開專案。目前可安裝的 Skill「**Skill Companion**」協助不懂程式設計或 AI 術語的人，把日常願望、挫折或生活例子整理成誠實、可測試的 Skill 概念；也可能發現較小的非 Skill 方案更合適。
 
 **先聽懂，再找出適合的做法。**
 
@@ -12,18 +16,19 @@
 
 這是專案自我驗證，不是 OpenAI 官方認證；原型會明確標示尚未測試的行為與證據界線。
 
-## 從這裡開始
+## 快速看懂：核心特色
 
-Skill Companion 適合能用日常語言描述想要的結果，但還不知道答案應該做成 Skill、清單、模板或更小方案的人。
+這個原型的設計目標是：
 
-在 Codex 中使用內建的 `$skill-installer` 安裝已發布原型：
+- 從日常願望、挫折或生活例子開始，不要求使用者先懂技術名稱。
+- 在決定製作 Skill 前，先釐清真正想得到的結果。
+- 保留使用者界線，並分開陳述、推論、證據與未知事項。
+- 使用繁體中文或英文繼續對話，包括主動切換語言。
+- 產出可修改的任務契約；如果較小的非 Skill 形式更合適，也會如實提出。
 
-```text
-Use $skill-installer to install the Skill from
-https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-companion
-```
+**快速前往：** [30 秒示範](#demo) · [快速開始](#quick-start) · [與 Skill Creator 的差異](#differences) · [驗證](#validation) · [意見與參與](#feedback)
 
-安裝後開啟新任務、明確選取 `$skill-companion`，再描述一個願望、不方便的事情或生活例子；不需要先知道技術名稱。
+<a id="demo"></a>
 
 ## 30 秒看懂它
 
@@ -39,6 +44,21 @@ https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-com
 
 這個儲存庫是早期真人傳話攻防設計完成後，另行授權的實作階段。私人攻防逐字稿與設計期間的個人測試對話不會收錄在公開儲存庫中。
 
+<a id="quick-start"></a>
+
+## 快速開始
+
+Skill Companion 適合能用日常語言描述想要的結果，但還不知道答案應該做成 Skill、清單、模板或更小方案的人。
+
+在 Codex 中使用內建的 `$skill-installer` 安裝已發布原型：
+
+```text
+Use $skill-installer to install the Skill from
+https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-companion
+```
+
+安裝後開啟新任務、明確選取 `$skill-companion`，再描述一個願望、不方便的事情或生活例子；不需要先知道技術名稱。
+
 ## 它會做什麼
 
 - 從正向願望、不方便的事情或具體生活例子開始。
@@ -50,6 +70,8 @@ https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-com
 - 建立可修改的任務契約，並尋找最小而合理的候選形式。
 - 未經實際使用的替代方案會標示為尚未測試，不會宣稱已經有效。
 - 請使用者用自己的話說明結果、下一步及尚未證明的部分。
+
+<a id="differences"></a>
 
 ## 與 Skill Creator／Skill Creation 的決定性差異
 
@@ -171,6 +193,8 @@ https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-com
 
 OpenAI 目前的指南對需要更廣泛安裝式散布的內容較偏好 Plugin。這個原型仍是獨立 GitHub Skill；Plugin 封裝是未來另一項決定。
 
+<a id="validation"></a>
+
 ## 本機驗證
 
 使用 Python 3.10 或更新版本：
@@ -206,6 +230,8 @@ python tests/test_validator.py
 - 公開儲存庫只使用合成測試資料。
 - 不提交私人聊天逐字稿、本機絕對路徑、帳號資料、憑證或真人敏感內容。
 - 真人研究的原始證據應存放在受控位置；除非每位參與者明確同意公開，且資料已檢查重新識別風險。
+
+<a id="feedback"></a>
 
 ## 意見與參與
 

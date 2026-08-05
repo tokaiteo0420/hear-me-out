@@ -1,6 +1,10 @@
 # 聽人家說啦！ / Hear Me Out
 
-**Hear Me Out** is the public project for **Skill Companion**, its current installable Skill. It helps a person who does not know programming or AI terminology turn an everyday wish, frustration, or example into an honest, testable Skill concept—or discover that a smaller non-Skill solution is better.
+[![Release](https://img.shields.io/github/v/release/tokaiteo0420/hear-me-out?include_prereleases&label=release)](https://github.com/tokaiteo0420/hear-me-out/releases/tag/v0.1.0)
+[![Validation](https://github.com/tokaiteo0420/hear-me-out/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/tokaiteo0420/hear-me-out/actions/workflows/validate.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+**Hear Me Out** is a plain-language requirement-discovery project for **Codex**. Its current installable Skill, **Skill Companion**, helps a person who does not know programming or AI terminology turn an everyday wish, frustration, or example into an honest, testable Skill concept—or discover that a smaller non-Skill solution is better.
 
 **Tell it plainly. Find what fits.**
 
@@ -12,18 +16,19 @@ Current public release: [**v0.1.0 Prototype (pre-release)**](https://github.com/
 
 This is project self-validation, not official OpenAI certification. The prototype is intentionally explicit about untested behavior and evidence limits.
 
-## Start here
+## Quick overview: key features
 
-Skill Companion is for someone who can describe the result they want in everyday language but does not yet know whether the answer should be a Skill, a checklist, a template, or something smaller.
+This prototype is designed to:
 
-Install the published prototype with Codex's built-in `$skill-installer`:
+- start from an everyday wish, frustration, or example without requiring technical terms;
+- clarify the desired result before committing to build a Skill;
+- preserve user-defined boundaries and separate statements, inference, evidence, and unknowns;
+- continue in Traditional Chinese or English, including deliberate language switching;
+- produce an editable task contract and recommend a smaller non-Skill form when it fits better.
 
-```text
-Use $skill-installer to install the Skill from
-https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-companion
-```
+**Jump to:** [30-second example](#demo) · [Quick start](#quick-start) · [Differences](#differences) · [Validation](#validation) · [Feedback](#feedback)
 
-Then start a new task, explicitly select `$skill-companion`, and describe one wish, inconvenience, or everyday example. You do not need to supply technical terms.
+<a id="demo"></a>
 
 ## A 30-second example
 
@@ -39,6 +44,21 @@ The companion should preserve the stated boundaries, clarify only material unkno
 
 This repository is the separately authorized implementation stage of an earlier human-relayed design process. It does not include the private debate transcripts or personal test conversations used during design.
 
+<a id="quick-start"></a>
+
+## Quick start
+
+Skill Companion is for someone who can describe the result they want in everyday language but does not yet know whether the answer should be a Skill, a checklist, a template, or something smaller.
+
+Install the published prototype with Codex's built-in `$skill-installer`:
+
+```text
+Use $skill-installer to install the Skill from
+https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-companion
+```
+
+Then start a new task, explicitly select `$skill-companion`, and describe one wish, inconvenience, or everyday example. You do not need to supply technical terms.
+
 ## What it does
 
 - Starts from a positive wish, a problem, or a concrete life example.
@@ -50,6 +70,8 @@ This repository is the separately authorized implementation stage of an earlier 
 - Creates an editable task contract and chooses the smallest plausible candidate form.
 - Labels untried alternatives as untested instead of promising usefulness.
 - Requires the user to explain the result, next step, and unproven parts in their own words.
+
+<a id="differences"></a>
 
 ## How it differs from Skill Creator / Skill Creation
 
@@ -171,6 +193,8 @@ Official references:
 
 OpenAI's current guidance prefers a plugin when broader installable distribution is needed. This prototype remains a standalone GitHub Skill; plugin packaging is a separate future decision.
 
+<a id="validation"></a>
+
 ## Validate locally
 
 With Python 3.10 or newer:
@@ -206,6 +230,8 @@ Every case declares an `execution_scope`. Controlled-only cases require an autho
 - Use synthetic test fixtures in this public repository.
 - Do not commit private chat transcripts, local absolute paths, account data, credentials, or real sensitive user content.
 - Keep raw human-study evidence in an access-controlled location unless every participant has explicitly agreed to publication and the data has been reviewed for re-identification risk.
+
+<a id="feedback"></a>
 
 ## Feedback and contributions
 
