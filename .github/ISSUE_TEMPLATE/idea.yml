@@ -1,0 +1,34 @@
+name: Improvement idea / 改善想法
+description: Suggest a change without needing to design the implementation.
+title: "[Idea] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        只要說明生活中想改善的事情；不需要先知道技術做法。
+        Describe the everyday improvement you want. You do not need to design the implementation.
+  - type: textarea
+    id: inconvenience
+    attributes:
+      label: 現在有什麼不方便？ / What is inconvenient now?
+    validations:
+      required: true
+  - type: textarea
+    id: better_result
+    attributes:
+      label: 改善後希望看到什麼結果？ / What result would be better?
+    validations:
+      required: true
+  - type: textarea
+    id: boundaries
+    attributes:
+      label: 有哪些不能被忽略的界線？ / What boundaries must not be ignored?
+      description: 沒有或不知道都可以直接寫。 / You may write "none" or "I don't know."
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隱私確認 / Privacy check
+      options:
+        - label: 我已移除私人、可識別及敏感內容。 / I removed private, identifying, and sensitive information.
+          required: true

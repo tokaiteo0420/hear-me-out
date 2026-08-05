@@ -1,0 +1,36 @@
+name: Something was hard to understand / 有一句話很難理解
+description: Report confusing wording without needing technical terms.
+title: "[Confusing] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        謝謝你告訴我們哪裡看不懂。請不要貼私人對話全文、帳號資料或敏感內容。
+        Thank you for showing us what was unclear. Please do not post full private conversations, account data, or sensitive content.
+  - type: textarea
+    id: context
+    attributes:
+      label: 當時想完成什麼？ / What were you trying to accomplish?
+      description: 一兩句日常說法就可以。 / One or two everyday sentences are enough.
+    validations:
+      required: true
+  - type: textarea
+    id: confusing_words
+    attributes:
+      label: 哪一句或哪個部分看不懂？ / What was hard to understand?
+      description: 可以只貼造成困惑的短句，並移除私人內容。 / Quote only the short confusing part and remove private information.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 怎樣說會比較容易理解？ / What would have been easier?
+      description: 不知道也可以寫「不知道」。 / You may write "I don't know."
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隱私確認 / Privacy check
+      options:
+        - label: 我已移除私人、可識別及敏感內容。 / I removed private, identifying, and sensitive information.
+          required: true

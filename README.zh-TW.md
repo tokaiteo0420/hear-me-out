@@ -6,7 +6,34 @@
 
 繁體中文 | [English](README.md)
 
-目前預定版本：**0.1.0 Prototype**。
+目前公開版本：[**v0.1.0 Prototype（預發行版）**](https://github.com/tokaiteo0420/hear-me-out/releases/tag/v0.1.0)。
+
+這是專案自我驗證，不是 OpenAI 官方認證；原型會明確標示尚未測試的行為與證據界線。
+
+## 從這裡開始
+
+Skill Companion 適合能用日常語言描述想要的結果，但還不知道答案應該做成 Skill、清單、模板或更小方案的人。
+
+在 Codex 中使用內建的 `$skill-installer` 安裝已發布原型：
+
+```text
+Use $skill-installer to install the Skill from
+https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-companion
+```
+
+安裝後開啟新任務、明確選取 `$skill-companion`，再描述一個願望、不方便的事情或生活例子；不需要先知道技術名稱。
+
+## 30 秒看懂它
+
+以下是簡化的合成示範，不保證實際回覆逐字相同：
+
+> **使用者：** 人家想要一個只整理自己筆記、而且不要自動發布的夥伴。
+>
+> **夥伴：** 當你交給它一篇雜亂筆記時，希望它交回摘要、分類，還是待辦事項？
+>
+> **使用者：** 簡短摘要，加上最多三項待辦。
+
+夥伴應保留已說明的界線，只釐清會影響成果的重要未知事項，也不會把尚未測試的設計說成已經實用或完成安裝。
 
 這個儲存庫是早期真人傳話攻防設計完成後，另行授權的實作階段。私人攻防逐字稿與設計期間的個人測試對話不會收錄在公開儲存庫中。
 
@@ -99,6 +126,9 @@ Skill Companion 可能適合：
   agents/openai.yaml              UI 與明確叫用政策
   references/                     詳細執行規則
 .github/workflows/validate.yml    跨平台靜態驗證
+.github/ISSUE_TEMPLATE/           一般使用者也能填寫的意見表單
+.github/social-preview.png        儲存庫分享預覽圖片
+CONTRIBUTING.md                    含隱私界線的參與說明
 docs/design-basis.md              去識別化的設計依據
 tools/validate_repo.py            無第三方相依的儲存庫驗證器
 tests/test_validator.py           驗證器本身的突變測試
@@ -119,7 +149,7 @@ reports/validation-0.1.0.md       目前的專案自我驗證結果
 
 這個 Skill 禁止隱性叫用。只有符合內容、卻沒有指定 `$skill-companion` 的請求，不應自動啟動這套流程。
 
-## GitHub 發布後安裝
+## 安裝已發布的 GitHub 版本
 
 建議使用內建 `$skill-installer`，並提供固定 GitHub 標籤及 Skill 路徑：
 
@@ -128,7 +158,7 @@ Use $skill-installer to install the Skill from
 https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-companion
 ```
 
-這是預定的版本標籤路徑；儲存庫公開且建立 `v0.1.0` 標籤前不會生效。請在新的任務中測試安裝；只把資料夾複製過去，不能證明主機確實載入。
+這個固定網址會安裝已發布的 `v0.1.0` 內容，不會跟著日後可能變動的 `main` 改變。請在新的任務中測試安裝；只把資料夾複製過去，不能證明主機確實載入。
 
 手動安裝時，只複製 `.agents/skills/skill-companion` 到目前 Codex 版本支援的使用者 Skill 位置。現行公開 Codex 指南在 `$HOME/.agents/skills` 下介紹使用者範圍 Skill；由安裝器管理的位置可能因版本而不同。請記錄實際路徑與主機版本，不要假設兩者完全相同。
 
@@ -174,6 +204,16 @@ python tests/test_validator.py
 - 公開儲存庫只使用合成測試資料。
 - 不提交私人聊天逐字稿、本機絕對路徑、帳號資料、憑證或真人敏感內容。
 - 真人研究的原始證據應存放在受控位置；除非每位參與者明確同意公開，且資料已檢查重新識別風險。
+
+## 意見與參與
+
+回報問題不需要懂 GitHub 術語。開啟 Issue 後，選擇最接近實際情況的表單：
+
+- **有一句話很難理解**
+- **夥伴沒有理解我的目標**
+- **我有一個改善想法**
+
+請用摘要或去識別化內容說明，不要公開私人對話、帳號資料或敏感內容。簡單的參與及驗證方式請見 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 授權
 

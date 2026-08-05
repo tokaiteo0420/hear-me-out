@@ -6,7 +6,34 @@
 
 [繁體中文說明](README.zh-TW.md) | English
 
-Current release target: **0.1.0 Prototype**.
+Current public release: [**v0.1.0 Prototype (pre-release)**](https://github.com/tokaiteo0420/hear-me-out/releases/tag/v0.1.0).
+
+This is project self-validation, not official OpenAI certification. The prototype is intentionally explicit about untested behavior and evidence limits.
+
+## Start here
+
+Skill Companion is for someone who can describe the result they want in everyday language but does not yet know whether the answer should be a Skill, a checklist, a template, or something smaller.
+
+Install the published prototype with Codex's built-in `$skill-installer`:
+
+```text
+Use $skill-installer to install the Skill from
+https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-companion
+```
+
+Then start a new task, explicitly select `$skill-companion`, and describe one wish, inconvenience, or everyday example. You do not need to supply technical terms.
+
+## A 30-second example
+
+The following is a simplified synthetic example, not a promise of exact wording:
+
+> **Person:** I want a reusable companion that organizes my own notes and never publishes automatically.
+>
+> **Companion:** When you give it a messy note, what result should it return—for example, a summary, categories, or action items?
+>
+> **Person:** A short summary and at most three action items.
+
+The companion should preserve the stated boundaries, clarify only material unknowns, and avoid pretending that an untested design is already useful or installed.
 
 This repository is the separately authorized implementation stage of an earlier human-relayed design process. It does not include the private debate transcripts or personal test conversations used during design.
 
@@ -99,6 +126,9 @@ The installed Skill is instruction-only. It has no runtime scripts, MCP dependen
   agents/openai.yaml              UI and explicit-invocation policy
   references/                     Detailed runtime rules
 .github/workflows/validate.yml    Cross-platform static validation
+.github/ISSUE_TEMPLATE/           Plain-language feedback forms
+.github/social-preview.png        Repository sharing artwork
+CONTRIBUTING.md                    Privacy-aware contribution guide
 docs/design-basis.md              Sanitized accepted design basis
 tools/validate_repo.py            Dependency-free repository validator
 tests/test_validator.py           Mutation tests for the validator itself
@@ -119,7 +149,7 @@ The test expectations remain outside the installed Skill so a fresh evaluator ca
 
 The Skill disables implicit invocation. A matching request without `$skill-companion` should not activate this workflow automatically.
 
-## Install from GitHub after publication
+## Install the published GitHub release
 
 Prefer the built-in `$skill-installer` and give it the pinned GitHub tag plus this Skill path:
 
@@ -128,7 +158,7 @@ Use $skill-installer to install the Skill from
 https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-companion
 ```
 
-This URL is the planned tagged release path. It will not work until the repository is published and tag `v0.1.0` exists. Test installation in a fresh task; do not treat a copied folder as proof that the host loaded it.
+This pinned URL installs the published `v0.1.0` contents rather than whatever may later change on `main`. Test installation in a fresh task; do not treat a copied folder as proof that the host loaded it.
 
 For manual installation, copy only `.agents/skills/skill-companion` to the user-skill location supported by the installed Codex version. The current public Codex guide documents user-scoped authoring under `$HOME/.agents/skills`; installer-managed locations may differ by build. Record the observed path and host version instead of assuming equivalence.
 
@@ -174,6 +204,16 @@ Every case declares an `execution_scope`. Controlled-only cases require an autho
 - Use synthetic test fixtures in this public repository.
 - Do not commit private chat transcripts, local absolute paths, account data, credentials, or real sensitive user content.
 - Keep raw human-study evidence in an access-controlled location unless every participant has explicitly agreed to publication and the data has been reviewed for re-identification risk.
+
+## Feedback and contributions
+
+You do not need to know GitHub terminology to report a problem. Open an Issue and choose the form that best matches what happened:
+
+- **Something was hard to understand**
+- **The companion misunderstood my goal**
+- **I have an improvement idea**
+
+Please summarize or redact personal material instead of posting private conversations, account details, or sensitive content. See [CONTRIBUTING.md](CONTRIBUTING.md) for the lightweight contribution and validation process.
 
 ## License
 

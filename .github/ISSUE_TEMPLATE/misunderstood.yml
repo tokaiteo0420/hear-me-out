@@ -1,0 +1,34 @@
+name: The companion misunderstood my goal / 夥伴沒有理解我的目標
+description: Describe the mismatch in plain language.
+title: "[Goal mismatch] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不需要提供完整逐字稿；請用摘要說明真正想要的結果與夥伴理解成的結果。
+        A full transcript is not needed. Summarize the result you wanted and what the companion understood instead.
+  - type: textarea
+    id: wanted
+    attributes:
+      label: 真正想要的結果 / The result you wanted
+    validations:
+      required: true
+  - type: textarea
+    id: interpreted
+    attributes:
+      label: 夥伴理解成什麼 / What the companion appeared to understand
+    validations:
+      required: true
+  - type: textarea
+    id: turning_point
+    attributes:
+      label: 你從哪裡開始覺得不對？ / When did it start feeling wrong?
+      description: 大概描述即可，不需要技術分析。 / A rough description is enough; no technical analysis is required.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隱私確認 / Privacy check
+      options:
+        - label: 我已移除私人、可識別及敏感內容。 / I removed private, identifying, and sensitive information.
+          required: true
