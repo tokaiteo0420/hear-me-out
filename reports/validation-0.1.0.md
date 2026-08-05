@@ -1,7 +1,7 @@
 # Project Self-Validation Report — 0.1.0 Prototype
 
 Date: 2026-08-06
-Current decision: `PRIVATE_REMOTE_AND_CI_VALIDATED_AWAITING_CLEAN_INSTALL`, deterministic project checks passed, and limited current-package behavior was human-observed; the project is not yet public or release-ready.
+Current decision: `PRIVATE_REMOTE_CI_AND_PINNED_INSTALL_VALIDATED`, deterministic project checks passed, and limited current-package behavior was human-observed; the project is not yet public or release-ready.
 
 This is a project self-validation report. It is not official OpenAI certification and does not establish general safety, low burden, usefulness, host loading, or installation.
 
@@ -145,6 +145,18 @@ ACT-02 used the current package in three fresh Codex desktop tasks without selec
 
 This meets ACT-02's declared three-run host-observation count for implicit nonactivation. It does not show a neutral no-Skill baseline: another system workflow handled every request. That alternate routing is a host observation, not evidence for or against Skill Companion's usefulness. The same executor performed all three runs, raw screenshots were supplied privately, and the exact Codex build remains unavailable. The result is limited to this prompt and workspace state; it does not prove nonactivation for every wording, build, installation state, or Skill conflict.
 
+## Pinned private GitHub installation observations
+
+The built-in Skill Installer installed `.agents/skills/skill-companion` from private GitHub revision `bc14a4a` into the current Codex desktop user's personal Skill scope. The installed revision contains the same Skill-package SHA-256 recorded above; later repository-only report commits do not change that package.
+
+| ID | Result | Narrow observation |
+|---|---|---|
+| INSTALL-01 | PASS | The installer reported successful installation from pinned revision `bc14a4a` and stated that the Skill would become available on the next turn. This proves installer file placement for this authenticated environment, not host loading or behavior. |
+| INSTALL-02 | PASS | In a new task in an independent empty project, the `$` picker displayed Skill Companion as a personal Skill. After explicit selection, it asked one plain-language question about the desired result and offered a wish, inconvenience, or everyday example as starting points. This is one installed-copy load observation, not general behavior evidence. |
+| INSTALL-03 | PASS | In another new task, the same matching English request was sent without selecting a Skill. Skill Companion did not appear; host reasoning named a bundled `skill-creation guide`. This is one installed-copy nonactivation observation and does not generalize to every prompt or host build. |
+
+No real task was completed with the installed copy. Disable, removal, reinstall, recovery, public anonymous access, and installation from a release tag remain untested.
+
 ## Novice human exploratory observations on package `621ac57c...`
 
 HN-01 and HN-02 used Skill package `621ac57c16b551c585094eee39d8367a6cdab6de68c9978a292984bb184f0277` in fresh Codex desktop tasks on Windows at reasoning level `中`. The participant reported no Skill, programming, or engineering knowledge and ordinary computer use limited to web browsing and games. A family member selected the Skill and transcribed the participant's words without reading assistance; the participant read the responses directly. These are exploratory observations from one participant, not a confirmatory study or current-package evidence.
@@ -179,17 +191,17 @@ An independent recount of the captured exchange matched the final response-deman
 | `DIALOGUE_BEHAVIOR_HUMAN_OBSERVED_LIMITED` | ATTAINED within a named current-package case | PROV-05 v0.1.1 passed five same-executor current-package runs; prior-package observations remain separately scoped and no result is generalized. |
 | `ARTIFACT_CANDIDATE_CREATED` | ATTAINED | Current local Skill text and repository artifacts. |
 | `STRUCTURE_VALIDATED_FOR_PLATFORM_VERSION` | INCONCLUSIVE | Structure validators passed, but the exact Codex build was not recorded. |
-| `HOST_LOAD_OBSERVED` | ATTAINED for explicit current-package selection in the test workspace | The current package was visibly selected through the desktop `$` picker in five fresh tasks. Separately, ACT-02 observed 3/3 nonactivation for one matching prompt while the host routed to a bundled creation workflow. Exact build, clean-install provenance, broader prompt coverage, disable, and recovery remain incomplete. |
+| `HOST_LOAD_OBSERVED` | ATTAINED narrowly for repo-scoped and pinned installed copies | The current package was visibly selected through the desktop `$` picker in five repo-scoped tasks and once after pinned private GitHub installation. ACT-02 observed 3/3 repo-scoped nonactivation, and INSTALL-03 added one installed-copy nonactivation observation. Exact build, broader prompt coverage, disable, and recovery remain incomplete. |
 | `BEHAVIOR_FIDELITY_VERIFIED` | NOT_ATTAINED | PROV-05 and ACT-02 reached their declared repetition counts, but PROV-05 still lacks blinded independent human grading and the remaining required critical-case evidence is incomplete. |
 | `USER_TESTED_UTILITY_WITHIN_SCOPE` | NOT_RUN | No human completed a real task with a candidate. |
 | `RUNTIME_GUARD_VERIFIED` | NOT_RUN | No host-level tool or data-flow audit. |
-| `INSTALLED_FOR_NAMED_ENVIRONMENT` | NOT_RUN | Local repo creation is not installation evidence. |
+| `INSTALLED_FOR_NAMED_ENVIRONMENT` | ATTAINED narrowly for the current Windows Codex desktop user scope | The built-in installer reported success from pinned private revision `bc14a4a`, and the personal Skill appeared on the next new task. The exact Codex build is unavailable, so this does not establish portability to another installation. |
 
 ## Public-release blockers
 
-1. The private GitHub repository, clean clone, and CI checks passed; clean installation from GitHub into an independent environment has not yet been observed.
+1. The private repository, clean clone, CI checks, pinned private installation, explicit installed-copy load, and one installed-copy nonactivation check passed; installation from the planned release tag has not yet been tested.
 2. No pinned tag, public visibility, or GitHub release archive exists.
-3. Current-hash explicit selection and ACT-02 nonactivation for one matching prompt were observed, but clean-install provenance, exact build, broader implicit-routing coverage, disable, and recovery remain unobserved or incomplete.
+3. Current-hash explicit selection and nonactivation for one matching prompt were observed, but the exact build, broader implicit-routing coverage, disable, removal, reinstall, and recovery remain unobserved or incomplete.
 4. PROV-05 and ACT-02 reached their required repetition counts, but PROV-05 lacks blinded independent grading and other critical behavior cases remain incomplete. Controlled-only cases are not transferred to personal accounts to satisfy counts.
 5. Human burden and real-task utility studies have not run.
 
