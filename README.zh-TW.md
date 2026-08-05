@@ -4,6 +4,8 @@
 
 **先聽懂，再找出適合的做法。**
 
+![聽人家說啦：先聽見日常願望，再探索可能方向並找出合適做法](.github/social-preview.png)
+
 繁體中文 | [English](README.md)
 
 目前公開版本：[**v0.1.0 Prototype（預發行版）**](https://github.com/tokaiteo0420/hear-me-out/releases/tag/v0.1.0)。

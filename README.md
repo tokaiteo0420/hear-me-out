@@ -4,6 +4,8 @@
 
 **Tell it plainly. Find what fits.**
 
+![Hear Me Out: listen to an everyday wish, explore possible directions, and find what fits](.github/social-preview.png)
+
 [繁體中文說明](README.zh-TW.md) | English
 
 Current public release: [**v0.1.0 Prototype (pre-release)**](https://github.com/tokaiteo0420/hear-me-out/releases/tag/v0.1.0).
