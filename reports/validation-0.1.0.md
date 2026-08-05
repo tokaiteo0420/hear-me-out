@@ -1,7 +1,7 @@
 # Project Self-Validation Report — 0.1.0 Prototype
 
 Date: 2026-08-06
-Current decision: `PRIVATE_REMOTE_CLEAN_CLONE_VALIDATED`, deterministic project checks passed, and limited current-package behavior was human-observed; the project is not yet public or release-ready.
+Current decision: `PRIVATE_REMOTE_AND_CI_VALIDATED_AWAITING_CLEAN_INSTALL`, deterministic project checks passed, and limited current-package behavior was human-observed; the project is not yet public or release-ready.
 
 This is a project self-validation report. It is not official OpenAI certification and does not establish general safety, low burden, usefulness, host loading, or installation.
 
@@ -46,6 +46,7 @@ This is a project self-validation report. It is not official OpenAI certificatio
 | Portability and privacy scan | PASS | No private absolute path, private transcript ID, common credential pattern, placeholder TODO, symlink, or case-colliding path found. |
 | Clean-copy portability | PASS | A clean copy in a system temporary path containing a space and non-ASCII characters produced the same Skill-package and repository-tree hashes. This was not a GitHub clone or installation test. |
 | Private GitHub clean clone | PASS | After commit `199cf1c` was pushed, a new single-branch clone from the private GitHub remote passed strict validation with 7 checks, 0 warnings, and 0 failures. This is remote-content evidence, not installation, public-release, behavior, or utility evidence. |
+| GitHub Actions | PASS for commits `199cf1c` and `8b2350c` | The `validate-hear-me-out` workflow completed successfully after both private pushes. The human judge supplied a private screenshot of the green workflow-run results; the screenshot is not committed. This is CI evidence, not official certification or runtime utility evidence. |
 | Validator mutation suite | PASS | Baseline plus eight failure checks, including rejection of a controlled-only case exposed to a general human account. |
 
 Static validator result: 8 checks passed, 0 warnings, 0 failures.
@@ -186,7 +187,7 @@ An independent recount of the captured exchange matched the final response-deman
 
 ## Public-release blockers
 
-1. The private GitHub repository exists and a clean clone passed strict validation, but the GitHub Actions result for the final publication-preparation commit has not yet been observed.
+1. The private GitHub repository, clean clone, and CI checks passed; clean installation from GitHub into an independent environment has not yet been observed.
 2. No pinned tag, public visibility, or GitHub release archive exists.
 3. Current-hash explicit selection and ACT-02 nonactivation for one matching prompt were observed, but clean-install provenance, exact build, broader implicit-routing coverage, disable, and recovery remain unobserved or incomplete.
 4. PROV-05 and ACT-02 reached their required repetition counts, but PROV-05 lacks blinded independent grading and other critical behavior cases remain incomplete. Controlled-only cases are not transferred to personal accounts to satisfy counts.
