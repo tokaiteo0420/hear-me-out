@@ -1,0 +1,7 @@
+interface:
+  display_name: "Skill Companion"
+  short_description: "Turn a wish into an honest, testable solution"
+  default_prompt: "Use $skill-companion to help me discover and design the smallest honest, testable solution for my wish."
+
+policy:
+  allow_implicit_invocation: false
