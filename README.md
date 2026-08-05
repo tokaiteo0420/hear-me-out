@@ -26,9 +26,7 @@ This prototype is designed to:
 - continue in Traditional Chinese or English, including deliberate language switching;
 - produce an editable task contract and recommend a smaller non-Skill form when it fits better.
 
-**Jump to:** [30-second example](#demo) · [Quick start](#quick-start) · [Differences](#differences) · [Validation](#validation) · [Feedback](#feedback)
-
-<a id="demo"></a>
+**Jump to:** [30-second example](#a-30-second-example) · [Quick start](#quick-start) · [Differences](#how-it-differs-from-skill-creator--skill-creation) · [Validation](#validate-locally) · [Feedback](#feedback-and-contributions)
 
 ## A 30-second example
 
@@ -43,8 +41,6 @@ The following is a simplified synthetic example, not a promise of exact wording:
 The companion should preserve the stated boundaries, clarify only material unknowns, and avoid pretending that an untested design is already useful or installed.
 
 This repository is the separately authorized implementation stage of an earlier human-relayed design process. It does not include the private debate transcripts or personal test conversations used during design.
-
-<a id="quick-start"></a>
 
 ## Quick start
 
@@ -70,8 +66,6 @@ Then start a new task, explicitly select `$skill-companion`, and describe one wi
 - Creates an editable task contract and chooses the smallest plausible candidate form.
 - Labels untried alternatives as untested instead of promising usefulness.
 - Requires the user to explain the result, next step, and unproven parts in their own words.
-
-<a id="differences"></a>
 
 ## How it differs from Skill Creator / Skill Creation
 
@@ -193,8 +187,6 @@ Official references:
 
 OpenAI's current guidance prefers a plugin when broader installable distribution is needed. This prototype remains a standalone GitHub Skill; plugin packaging is a separate future decision.
 
-<a id="validation"></a>
-
 ## Validate locally
 
 With Python 3.10 or newer:
@@ -230,8 +222,6 @@ Every case declares an `execution_scope`. Controlled-only cases require an autho
 - Use synthetic test fixtures in this public repository.
 - Do not commit private chat transcripts, local absolute paths, account data, credentials, or real sensitive user content.
 - Keep raw human-study evidence in an access-controlled location unless every participant has explicitly agreed to publication and the data has been reviewed for re-identification risk.
-
-<a id="feedback"></a>
 
 ## Feedback and contributions
 

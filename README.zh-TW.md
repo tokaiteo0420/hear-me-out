@@ -26,9 +26,7 @@
 - 使用繁體中文或英文繼續對話，包括主動切換語言。
 - 產出可修改的任務契約；如果較小的非 Skill 形式更合適，也會如實提出。
 
-**快速前往：** [30 秒示範](#demo) · [快速開始](#quick-start) · [與 Skill Creator 的差異](#differences) · [驗證](#validation) · [意見與參與](#feedback)
-
-<a id="demo"></a>
+**快速前往：** [30 秒示範](#30-秒看懂它) · [快速開始](#快速開始) · [與 Skill Creator 的差異](#與-skill-creatorskill-creation-的決定性差異) · [驗證](#本機驗證) · [意見與參與](#意見與參與)
 
 ## 30 秒看懂它
 
@@ -43,8 +41,6 @@
 夥伴應保留已說明的界線，只釐清會影響成果的重要未知事項，也不會把尚未測試的設計說成已經實用或完成安裝。
 
 這個儲存庫是早期真人傳話攻防設計完成後，另行授權的實作階段。私人攻防逐字稿與設計期間的個人測試對話不會收錄在公開儲存庫中。
-
-<a id="quick-start"></a>
 
 ## 快速開始
 
@@ -70,8 +66,6 @@ https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-com
 - 建立可修改的任務契約，並尋找最小而合理的候選形式。
 - 未經實際使用的替代方案會標示為尚未測試，不會宣稱已經有效。
 - 請使用者用自己的話說明結果、下一步及尚未證明的部分。
-
-<a id="differences"></a>
 
 ## 與 Skill Creator／Skill Creation 的決定性差異
 
@@ -193,8 +187,6 @@ https://github.com/tokaiteo0420/hear-me-out/tree/v0.1.0/.agents/skills/skill-com
 
 OpenAI 目前的指南對需要更廣泛安裝式散布的內容較偏好 Plugin。這個原型仍是獨立 GitHub Skill；Plugin 封裝是未來另一項決定。
 
-<a id="validation"></a>
-
 ## 本機驗證
 
 使用 Python 3.10 或更新版本：
@@ -230,8 +222,6 @@ python tests/test_validator.py
 - 公開儲存庫只使用合成測試資料。
 - 不提交私人聊天逐字稿、本機絕對路徑、帳號資料、憑證或真人敏感內容。
 - 真人研究的原始證據應存放在受控位置；除非每位參與者明確同意公開，且資料已檢查重新識別風險。
-
-<a id="feedback"></a>
 
 ## 意見與參與
 
